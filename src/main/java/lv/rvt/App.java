@@ -7,6 +7,8 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
+        
+        
         System.out.println("ievadi savu vārdu");
         String name = scanner.nextLine();
         System.out.println("ievadi savu uzvārdu");
@@ -17,10 +19,10 @@ public class App
         //int age = 17;
         //boolean isOnline = true;
 
-        System.out.println("Tu ievadīji");
-        System.out.println(name);
-        System.out.println(uzvards);
-        System.out.println(grupa);
+        System.out.println("Tu ievadīji: "+ name +" "  + uzvards+"asd " + grupa);
+        //System.out.println(name);
+        //System.out.println(uzvards);
+        //System.out.println(grupa);
 
 
     }
