@@ -21,12 +21,12 @@ public class App
                 break;
             }
 
-            if (cipar < 0) {
+            else if (cipar < 0) {
                 System.out.println("Nederīgs cipars");
                 continue;
             }
 
-            System.out.println(cipar * cipar);
+            System.out.println(cipars * cipars);
         }
     }
 
