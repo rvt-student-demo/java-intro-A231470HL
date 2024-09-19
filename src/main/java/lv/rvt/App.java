@@ -6,37 +6,30 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
 
-        System.out.println("Norādiet punkuts[0-100] ");
+        System.out.println("Enter the value of the gift: ");
+        int first =Integer.valueOf(reader.nextLine());
+        
 
-        int punkti = Integer.valueOf(scanner.nextLine());
-
-        if (punkti< 0) {
-            System.out.println("Neiespējami");
+        if (first < 5000) {
+            System.out.println("No tax!");
         }
-        else if( punkti < 49) {
-            System.out.println("Nenokārtots");
+        else if (first > 5000 || first <= 25000) {
+            System.out.println("Tax: " + (100+(first-5000)*0.08));
         }
-        else if( punkti < 59) {
-            System.out.println("1");
+        else if (first > 25000 || first <= 55000) {
+            System.out.println("Tax: " + (1700+(first-25000)*0.1));
         }
-        else if( punkti < 69) {
-            System.out.println("2");
+        else if (first > 55000 || first <= 200000) {
+            System.out.println("Tax: " + (4700+(first-55000)*0.12));
         }
-        else if( punkti < 79) {
-            System.out.println("3");
+        else if (first > 200000 || first <= 1000000) {
+            System.out.println("Tax: " + (22100+(first-200000)*0.15));
         }
-        else if( punkti < 89) {
-            System.out.println("4");
+        else if (first > 1000000) {
+            System.out.println("Tax: " + (100+(first-1000000)*0.17));
         }
-        else if( punkti < 100) {
-            System.out.println("5");
-        }
-        else if (punkti > 100) {
-            System.out.println("iespaidīgi");
-        }
-
     }
 
 }
