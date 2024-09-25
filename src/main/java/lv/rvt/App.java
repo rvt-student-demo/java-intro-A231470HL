@@ -12,22 +12,21 @@ public class App
         //int first =Integer.valueOf(reader.nextLine());
         
         Scanner scanner = new Scanner(System.in);
-
+        int count = 0;
+        int sum = 0;
         while (true) {
-            System.out.println("Ievadi ciparu: ");
-            int cipars = Integer.valueOf(scanner.nextLine());
-
-            if (cipars == 0) {
+            System.out.println("ievadiet skaitli");
+            int number = scanner.nextInt();
+            
+            if( number == 0) {
                 break;
             }
+            count++;
+            sum += number;
 
-            else if (cipar < 0) {
-                System.out.println("Nederīgs cipars");
-                continue;
-            }
-
-            System.out.println(cipars * cipars);
-        }
     }
+    System.out.println("sik skaitļi tika ievadīti:"+ count);
+    System.out.println("skaitļu summa:" + sum);
 
+    }
 }
