@@ -12,21 +12,13 @@ public class App
         //int first =Integer.valueOf(reader.nextLine());
         
         Scanner scanner = new Scanner(System.in);
-        int count = 0;
-        int sum = 0;
-        while (true) {
-            System.out.println("ievadiet skaitli");
-            int number = scanner.nextInt();
-            
-            if( number == 0) {
-                break;
-            }
-            count++;
-            sum += number;
+        System.out.println("Ievadiet skaitli no kura sāksiet skaitīt līdz 100: ");
+        int skaitlis = scanner.nextInt();
+        while (skaitlis <= 100) {
+            System.out.println(skaitlis);
+            skaitlis++;
 
-    }
-    System.out.println("sik skaitļi tika ievadīti:"+ count);
-    System.out.println("skaitļu summa:" + sum);
+        }
 
     }
 }
