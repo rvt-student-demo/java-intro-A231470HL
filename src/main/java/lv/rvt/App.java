@@ -13,6 +13,7 @@ public class App
         
         Scanner scanner = new Scanner(System.in);
         int sum = 0 ;
+        int length = 0;
         while (true) {
         int skaitlis = scanner.nextInt();
         if (skaitlis == -1) {
@@ -20,9 +21,13 @@ public class App
 
         }
         sum = sum + skaitlis;
+        length++ ;
         }
         System.out.println("tnx bye!");
-            System.out.println(sum);
+            System.out.println("summa: " + sum);
+            System.out.println("skaitļi:" + length);
+            System.out.println("vidējais: " + (sum/length));
+
     }
 }
  
