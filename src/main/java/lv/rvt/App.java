@@ -12,12 +12,17 @@ public class App
         //int first =Integer.valueOf(reader.nextLine());
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("dodiet ciparu ");
-        int faktorials = scanner.nextInt();
-        int sum = 1;
-        for (int i = 1; i <= faktorials; i++) {
-            sum = sum * i;
+        int sum = 0 ;
+        while (true) {
+        int skaitlis = scanner.nextInt();
+        if (skaitlis == -1) {
+            break;
+
         }
-        System.out.println(sum);
+        sum = sum + skaitlis;
+        }
+        System.out.println("tnx bye!");
+            System.out.println(sum);
     }
 }
+ 
