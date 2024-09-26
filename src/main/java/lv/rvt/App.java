@@ -13,12 +13,11 @@ public class App
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ievadiet skaitli no kura sāksiet skaitīt līdz 100: ");
-        int skaitlis = scanner.nextInt();
-        while (skaitlis <= 100) {
-            System.out.println(skaitlis);
-            skaitlis++;
+        int starts = scanner.nextInt();
+        int beigas = 100;
+        for (int i = starts; i <= beigas; i++) {
+            System.out.println(i);
 
         }
-
     }
 }
