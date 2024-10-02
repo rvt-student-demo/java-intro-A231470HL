@@ -12,22 +12,10 @@ public class App
         //int first =Integer.valueOf(reader.nextLine());
         
         Scanner scanner = new Scanner(System.in);
-        int sum = 0 ;
-        int length = 0;
-        while (true) {
-        int skaitlis = scanner.nextInt();
-        if (skaitlis == -1) {
-            break;
-
+        System.out.println("cik rindas?");
+        int reizes = scanner.nextInt();
+        for (int i = 0; i< reizes; i++){
+            System.out.println("In a hole in the ground there lived a method");
         }
-        sum = sum + skaitlis;
-        length++ ;
-        }
-        System.out.println("tnx bye!");
-            System.out.println("summa: " + sum);
-            System.out.println("skaitļi:" + length);
-            System.out.println("vidējais: " + (sum/length));
-
     }
 }
- 
