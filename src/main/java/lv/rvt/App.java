@@ -4,16 +4,10 @@ public class App
 {
     public class Main {
         public static void main(String[] args) {
-            dalisanaArTris(3, 6);
-            dalisanaArTris(2, 10);
-        }
-    
-        public static void dalisanaArTris(int beginning, int end) {
-            for (int i = beginning; i <= end; i++) {
-                if (i % 3 == 0) {
-                    System.out.println(i);
-                }
-            }
+           Stars.printStars(5);
+           Stars.printStars(3);
+           Stars.printStars(9);
+
         }
     }
 }
