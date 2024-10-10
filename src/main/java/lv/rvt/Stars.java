@@ -2,12 +2,14 @@ package lv.rvt;
 
 public class Stars {
     
-    public static void printRectangle( int width, int height){
-        for (int r = 0; r<height; r++){
-            for (int s = 0; s < width; s++){
+    public static void printTriangle( int size){
+        for (int x = 1; x <= size; x++)
+        {
+            for (int i = 1; i <= x; i++)
+            {
                 System.out.print("*");
             }
-            System.out.println();
+            System.out.println("");
         }
     }
 }

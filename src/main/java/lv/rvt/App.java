@@ -4,7 +4,7 @@ public class App
 {
     public class Main {
         public static void main(String[] args) {
-        Stars.printRectangle(17, 3);
+        Stars.printTriangle(3);
         }
     }
 }
