@@ -7,9 +7,9 @@ public class Stars {
         {
             for (int i = 1; i <= x; i++)
             {
-                System.out.print("*");
+                System.out.print(" ");
             }
-            System.out.println("");
+            System.out.println("*");
         }
     }
 }
