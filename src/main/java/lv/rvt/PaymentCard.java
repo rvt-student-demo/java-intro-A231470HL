@@ -7,19 +7,23 @@ public class PaymentCard {
         this.balance = initialBalance;
     }
 
-    // Method to reduce balance by 2.60 euros for affordable eating
     public void eatAffordably() {
-        // Only deduct if there's enough balance
         if (this.balance >= 2.60) {
             this.balance -= 2.60;
         }
     }
 
-    // Method to reduce balance by 4.60 euros for hearty eating
     public void eatHeartily() {
-        // Only deduct if there's enough balance
         if (this.balance >= 4.60) {
             this.balance -= 4.60;
+        }
+    }
+    public void addMoney(double amount) {
+        if (amount > 0) {
+            this.balance += amount;
+            if (this.balance > 150) {
+                this.balance = 150;
+            }
         }
     }
 
