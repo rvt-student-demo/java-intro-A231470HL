@@ -1,39 +1,27 @@
 package lv.rvt;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        // Create the cards for Paul and Matt
-        PaymentCard paulsCard = new PaymentCard(20); // Paul's card starts with 20 euros
-        PaymentCard mattsCard = new PaymentCard(30); // Matt's card starts with 30 euros
+        // Path to your CSV file
+        String fileName = "/workspaces/java-intro-A231470HL/src/main/resources/persons.csv";
+        
+        // Step 3: Read the persons from the CSV file
+        ArrayList<Person> persons = Utils.readPersonsFromCSV(fileName);
+        
+        // Step 4: Print each person using a for-each loop
+        for (Person person : persons) {
+            System.out.println(person);
+        }
 
-        // Paul eats heartily (4.60 euros deducted)
-        paulsCard.eatHeartily();
-        // Matt eats affordably (2.60 euros deducted)
-        mattsCard.eatAffordably();
+        // Step 4.1: Calculate the average age
+        int totalAge = 0;
+        for (Person person : persons) {
+            totalAge += person.getAge();
+        }
 
-        // Print the cards' values after these actions
-        System.out.println("Paul: " + paulsCard);
-        System.out.println("Matt: " + mattsCard);
-
-        // Paul tops up 20 euros
-        paulsCard.addMoney(20);
-
-        // Matt eats heartily (4.60 euros deducted)
-        mattsCard.eatHeartily();
-
-        // Print the cards' values after these actions
-        System.out.println("Paul: " + paulsCard);
-        System.out.println("Matt: " + mattsCard);
-
-        // Paul eats affordably twice (2.60 euros deducted each time)
-        paulsCard.eatAffordably();
-        paulsCard.eatAffordably();
-
-        // Matt tops up 50 euros
-        mattsCard.addMoney(50);
-
-        // Print the cards' values after these actions
-        System.out.println("Paul: " + paulsCard);
-        System.out.println("Matt: " + mattsCard);
+        double averageAge = (double) totalAge / persons.size();
+        System.out.println("Average Age: " + averageAge);
     }
 }

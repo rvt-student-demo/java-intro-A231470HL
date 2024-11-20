@@ -3,13 +3,37 @@ package lv.rvt;
 public class Person {
     private String name;
     private int age;
+    private double height;
+    private double weight;
 
-    public Person(String name) {
-        this.age = 0;
+    // Constructor
+    public Person(String name, int age, double height, double weight) {
         this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
     }
 
-    public void printPerson() {
-        System.out.println(this.name + ", age " + this.age + " years");
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    // toString() for printing person details
+    @Override
+    public String toString() {
+        return "Person{name='" + name + "', age=" + age + ", height=" + height + ", weight=" + weight + "}";
     }
 }
