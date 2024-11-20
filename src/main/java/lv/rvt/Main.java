@@ -3,15 +3,14 @@ package lv.rvt;
 public class Main {
 
     public static void main(String[] args) {
-        PaymentCard card = new PaymentCard(50);
-        System.out.println(card);  // Initial balance
+        PaymentCard card = new PaymentCard(5);
+        System.out.println(card);
 
-        card.eatAffordably();  // Deduct 2.60
-        System.out.println(card);  // After eatAffordably
+        card.eatHeartily();  // First attempt to eat heartily
+        System.out.println(card);
 
-        card.eatHeartily();  // Deduct 4.60
-        card.eatAffordably();  // Deduct another 2.60
-        System.out.println(card);  // After eatHeartily and second eatAffordably
+        card.eatHeartily();  // Second attempt to eat heartily
+        System.out.println(card);
     }
 }
 
