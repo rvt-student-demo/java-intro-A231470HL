@@ -1,2 +1,2 @@
-id, name, password
-1, root, 123
+name, age, whight, height
+jack, 22, 260, 159
