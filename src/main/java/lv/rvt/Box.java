@@ -34,4 +34,15 @@ public class Box {
     private double sideArea() {
         return height * length;
     }
+    public double length() {
+        return length;
+    }
+
+    public double height() {
+        return height;
+    }
+
+    public double width() {
+        return width;
+    }
 }
