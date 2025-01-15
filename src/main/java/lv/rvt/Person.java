@@ -1,46 +1,24 @@
 package lv.rvt;
 
 public class Person {
-            private String name;
-    private int age;
-    private int weight;
-    private int height;
+    private String name;
+    private String street;
 
-    public Person(String name, int age, int weight, int height) {
+    public Person(String name, String street) {
         this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
-    }    
-    public void setHeight(int newHeight) {
-        this.height = newHeight;
+        this.street = street;
     }
-
-    public void setWeight(int newWeight) {
-        this.weight = newWeight;
-    }
-
-    public double bodyMassIndex() {
-        double heigthPerHundred = this.height / 100.0;
-        return this.weight / (heigthPerHundred * heigthPerHundred);
-    }
-    public String getName() {
-        return this.name;
-    }
-    public int getAge() {
-        return this.age;
-    }
-
-    public int getWeight() {
-        return this.weight;
-    }
-
-    public int getHeight() {
-        return this.height;
-    }
-
+    @Override
     public String toString(){
-        return name + ", " + age + ", " + weight + ", " + height;
+        return name + "\n   "+ street;
     }
+    public static void main(String[] args) {
+    Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
+    Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
+
+    System.out.println(ada);
+    System.out.println(esko);
+    }
+    
 
 }
