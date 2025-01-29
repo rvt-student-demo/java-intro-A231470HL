@@ -1,22 +1,11 @@
 package lv.rvt;
 
-import java.util.ArrayList;
-
-public class Main {
+public class main {
     public static void main(String[] args) {
-        ArrayList<Student> students = new ArrayList<>();
-
-        // Add students to the list
-        students.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
-        
-        // Call the printStudent method
-        printStudents(students);
-    }
-
-    // Method to print the students
-    public static void printStudents(ArrayList<Student> students) {
-        for (Student student : students) {
-            System.out.println(student);
-        }
+        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+        juice.addToWarehouse(1000.0);
+        juice.takeFromWarehouse(11.3);
+        System.out.println(juice.getName()); // Juice
+        System.out.println(juice);
     }
 }
