@@ -1,19 +1,23 @@
 package lv.rvt;
 
 public class ProductWarehouse extends Warehouse {
-    private String productName;
+    private String name;
 
     public ProductWarehouse(String productName, double capacity) {
         super(capacity);
-        this.productName = productName;
+        this.name = productName;
     }
 
     public String getName() {
-        return productName;
+        return name;
+    }
+
+    public void setName(String newName) {
+        this.name = newName;
     }
 
     @Override
     public String toString() {
-        return productName + ": " + super.toString();
+        return name + ": " + super.toString();
     }
 }

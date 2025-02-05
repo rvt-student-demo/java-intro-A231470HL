@@ -1,15 +1,16 @@
 package lv.rvt;
+
 public class Warehouse {
     private double capacity;
     private double balance;
 
     public Warehouse(double capacity) {
-        this.capacity = capacity;
+        if (capacity <= 0) {
+            this.capacity = 0;
+        } else {
+            this.capacity = capacity;
+        }
         this.balance = 0;
-    }
-
-    public Warehouse(String string, double d) {
-        //TODO Auto-generated constructor stub
     }
 
     public double getBalance() {
@@ -20,42 +21,37 @@ public class Warehouse {
         return capacity;
     }
 
+    public double howMuchSpaceLeft() {
+        return capacity - balance;
+    }
+
     public void addToWarehouse(double amount) {
         if (amount > 0) {
-            balance = Math.min(balance + amount, capacity);
+            if (balance + amount > capacity) {
+                balance = capacity;
+            } else {
+                balance += amount;
+            }
         }
     }
 
     public double takeFromWarehouse(double amount) {
-        if (amount < 0) {
+        if (amount <= 0) {
             return 0;
         }
-        double takenAmount = Math.min(amount, balance);
-        balance -= takenAmount;
-        return takenAmount;
+        if (amount > balance) {
+            double all = balance;
+            balance = 0;
+            return all;
+        }
+        balance -= amount;
+        return amount;
     }
 
     @Override
     public String toString() {
-        return "balance = " + balance + ", space left " + (capacity - balance);
+        return "balance = " + balance + ", space left " + howMuchSpaceLeft();
     }
-    public class ProductWarehouse extends Warehouse {
-    private String productName;
-
-    public ProductWarehouse(String productName, double capacity) {
-        super(capacity);
-        this.productName = productName;
-    }
-
-    public String getName() {
-        return productName;
-    }
-
-    @Override
-    public String toString() {
-        return productName + ": " + super.toString();
-    }
-}
 }
 
 
